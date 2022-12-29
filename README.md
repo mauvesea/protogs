@@ -1,4 +1,4 @@
-# Pokémon Gold and Silver Proto [![Build Status][ci-badge]][ci]
+# Pokémon Gold and Silver Proto
 
 This is a custom game based on [the Pokémon Gold and Pokémon Silver disassembly](https://github.com/pret/pokegold).
 
@@ -6,7 +6,7 @@ This is a custom game based on [the Pokémon Gold and Pokémon Silver disassembl
 
 ## Links
 
-- **Discord:** [pret][discord]
+- **Discord:** [click here][discord]
 
 pret disassembly projects:
 
