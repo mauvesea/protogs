@@ -18,6 +18,7 @@ INCLUDE "audio/music/darkcave.asm"
 INCLUDE "audio/music/johtogymbattle.asm"
 INCLUDE "audio/music/championbattle.asm"
 INCLUDE "audio/music/ssaqua.asm"
+INCLUDE "audio/music/newbarktown.asm"
 INCLUDE "audio/music/goldenrodcity.asm"
 INCLUDE "audio/music/vermilioncity.asm"
 INCLUDE "audio/music/titlescreen.asm"
@@ -111,11 +112,6 @@ INCLUDE "audio/music/mainmenu.asm"
 INCLUDE "audio/music/lookkimonogirl.asm"
 INCLUDE "audio/music/pokeflutechannel.asm"
 INCLUDE "audio/music/bugcatchingcontest.asm"
-
-
-SECTION "Songs 5", ROMX
-
-INCLUDE "audio/music/newbarktown.asm"
 
 
 SECTION "Extra Songs 1", ROMX

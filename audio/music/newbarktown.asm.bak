@@ -1,4 +1,3 @@
-Music_NewBarkTown:
 	channel_count 4
 	channel 1, Music_NewBarkTown_Ch1
 	channel 2, Music_NewBarkTown_Ch2
