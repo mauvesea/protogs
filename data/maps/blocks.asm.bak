@@ -493,6 +493,9 @@ RuinsOfAlphInnerChamber_Blocks:
 SproutTower1F_Blocks:
 	INCBIN "maps/SproutTower1F.blk"
 
+BetaSproutTowerCutOut1_Blocks: ; unreferenced
+	INCBIN "maps/unused/BetaSproutTowerCutOut1.blk"
+
 SproutTower2F_Blocks:
 	INCBIN "maps/SproutTower2F.blk"
 
@@ -502,6 +505,8 @@ BetaSproutTowerCutOut2_Blocks: ; unreferenced
 SproutTower3F_Blocks:
 	INCBIN "maps/SproutTower3F.blk"
 
+BetaSproutTowerCutOut3_Blocks: ; unreferenced
+	INCBIN "maps/unused/BetaSproutTowerCutOut3.blk"
 
 RadioTower1F_Blocks:
 	INCBIN "maps/RadioTower1F.blk"
