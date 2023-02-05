@@ -198,13 +198,13 @@ include gfx/lz.mk
 
 ### Misc file-specific graphics rules
 
-gfx/pokemon/%/front.2bpp: rgbgfx += -Z -c embedded
-gfx/pokemon/%/front_gold.2bpp: rgbgfx += -Z -c embedded
-gfx/pokemon/%/front_silver.2bpp: rgbgfx += -Z -c embedded
+gfx/pokemon/%/front.2bpp: rgbgfx += -Z 
+gfx/pokemon/%/front_gold.2bpp: rgbgfx += -Z 
+gfx/pokemon/%/front_silver.2bpp: rgbgfx += -Z 
 
-gfx/pokemon/%/back.2bpp: rgbgfx += -Z -c embedded
-gfx/pokemon/%/back_gold.2bpp: rgbgfx += -Z -c embedded
-gfx/pokemon/%/back_silver.2bpp: rgbgfx += -Z -c embedded
+gfx/pokemon/%/back.2bpp: rgbgfx += -Z 
+gfx/pokemon/%/back_gold.2bpp: rgbgfx += -Z 
+gfx/pokemon/%/back_silver.2bpp: rgbgfx += -Z 
 
 gfx/pokemon/%/back_gold.2bpp: gfx/pokemon/%/back.png
 	$(RGBGFX) $(rgbgfx) -o $@ $<
@@ -216,7 +216,7 @@ gfx/pokemon/%/back_silver.2bpp: gfx/pokemon/%/back.png
 	$(if $(tools/gfx),\
 		tools/gfx $(tools/gfx) -o $@ $@)
 
-gfx/trainers/%.2bpp: rgbgfx += -Z -c embedded
+gfx/trainers/%.2bpp: rgbgfx += -Z 
 
 gfx/intro/fire.2bpp: tools/gfx += --remove-whitespace
 gfx/intro/fire1.2bpp: gfx/intro/charizard1.2bpp gfx/intro/charizard2_top.2bpp gfx/intro/space.2bpp ; cat $^ > $@
@@ -310,7 +310,7 @@ gfx/sgb/silver_border.sgb.tilemap: gfx/sgb/silver_border.bin ; tr < $< -d '\000'
 		tools/gfx $(tools/gfx) -d1 -o $@ $@)
 
 %.gbcpal: %.png
-	$(RGBGFX) -c embedded -p $@ $<
+	$(RGBGFX)  -p $@ $<
 
 %.dimensions: %.png
 	tools/png_dimensions $< $@

@@ -324,8 +324,8 @@ INCBIN "gfx/pokemon/bayleef/back.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/bayleef/shiny.pal"
 INCBIN "gfx/pokemon/meganium/back.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/meganium/shiny.pal"
-INCLUDE "gfx/palettes/redmon.pal" ; cyndaquil
-INCLUDE "gfx/palettes/redmon_shiny.pal"
+INCLUDE "gfx/pokemon/palettes/redmon.pal" ; cyndaquil
+INCLUDE "gfx/pokemon/cyndaquil/shiny.pal"
 INCBIN "gfx/pokemon/quilava/back.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/quilava/shiny.pal"
 INCBIN "gfx/pokemon/typhlosion/back.gbcpal", middle_colors
@@ -340,8 +340,8 @@ INCBIN "gfx/pokemon/sentret/back.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/sentret/shiny.pal"
 INCBIN "gfx/pokemon/furret/back.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/furret/shiny.pal"
-INCLUDE "gfx/palettes/brownmon.pal" ; hoothoot
-INCLUDE "gfx/palettes/brownmon_shiny.pal"
+INCBIN "gfx/pokemon/hoothoot/back.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hoothoot/shiny.pal"
 INCBIN "gfx/pokemon/noctowl/back.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/noctowl/shiny.pal"
 INCBIN "gfx/pokemon/ledyba/back.gbcpal", middle_colors
