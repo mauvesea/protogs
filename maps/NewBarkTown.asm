@@ -5,26 +5,115 @@
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
-	scene_script NewBarkTownNoop1Scene, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU
-	scene_script NewBarkTownNoop2Scene, SCENE_NEWBARKTOWN_NOOP
+	scene_script NewBarkTownNoop1Scene, SCENE_NEWBARKTOWN_RIVAL
+	scene_script NewBarkTownNoop2Scene, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU
+	scene_script NewBarkTownNoop3Scene, SCENE_NEWBARKTOWN_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, NewBarkTownFlypointCallback
 
 NewBarkTownNoop1Scene:
+	sdefer MeetRivalScript
 	end
 
 NewBarkTownNoop2Scene:
+	end
+	
+NewBarkTownNoop3Scene:
 	end
 
 NewBarkTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	endcallback
+	
+MeetRivalScript:
+	applymovement PLAYER, NewBarkTown_StepDown
+	opentext
+	writetext NewBarkTown_RivalText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applymovement NEWBARKTOWN_RIVAL, NewBarkTown_RivalMovement1
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext NewBarkTown_RivalText2
+	waitbutton
+	pause 15
+	showemote EMOTE_SHOCK, NEWBARKTOWN_RIVAL, 15
+	writetext NewBarkTown_RivalText3
+	waitbutton	
+	closetext
+	applymovement NEWBARKTOWN_RIVAL, NewBarkTown_RivalMovement2
+	disappear NEWBARKTOWN_RIVAL
+	setscene SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU
+	special RestartMapMusic
+	end
+	
+NewBarkTown_StepDown:
+	step DOWN
+	step_end
+	
+NewBarkTown_RivalMovement1:
+	slow_step UP
+	big_step UP
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step UP
+	slow_step UP
+	step_end
+	
+NewBarkTown_RivalMovement2:
+	slow_step DOWN
+	slow_step DOWN
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	step_end
+	
+NewBarkTown_RivalText1:
+	text "Hey, <PLAYER>!"
+	done
+
+NewBarkTown_RivalText2:
+	text "<RIVAL>: Did you"
+	line "hear? PROF.ELM"
+	
+	para "wanted to see me."
+	line "Guess that's my"
+	
+	para "lucky day! I'm"
+	line "finally getting"
+	
+	para "a #MON!"
+	done
+	
+NewBarkTown_RivalText3:
+	text "…Huh!? He's"
+	line "looking for you"
+	
+	para "as well, you say?"
+	
+	para "I better run"
+	line "then!"
+	
+	para "I'll get the"
+	line "stronger #MON"
+	
+	para "before you even"
+	line "get there."
+	
+	para "See ya!"
+	done	
 
 NewBarkTown_TeacherStopsYouScene1:
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
+	showemote EMOTE_SHOCK, NEWBARKTOWN_TEACHER, 15
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
@@ -48,6 +137,7 @@ NewBarkTown_TeacherStopsYouScene1:
 NewBarkTown_TeacherStopsYouScene2:
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
+	showemote EMOTE_SHOCK, NEWBARKTOWN_TEACHER, 15
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
@@ -104,27 +194,6 @@ NewBarkTownTeacherScript:
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 
-NewBarkTownRivalScript:
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
-	turnobject NEWBARKTOWN_RIVAL, LEFT
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	closetext
-	follow PLAYER, NEWBARKTOWN_RIVAL
-	applymovement PLAYER, NewBarkTown_RivalPushesYouAwayMovement
-	stopfollow
-	pause 5
-	turnobject NEWBARKTOWN_RIVAL, DOWN
-	pause 5
-	playsound SFX_TACKLE
-	applymovement PLAYER, NewBarkTown_RivalShovesYouOutMovement
-	applymovement NEWBARKTOWN_RIVAL, NewBarkTown_RivalReturnsToTheShadowsMovement
-	end
-
 NewBarkTownSign:
 	jumptext NewBarkTownSignText
 
@@ -134,16 +203,11 @@ NewBarkTownPlayersHouseSign:
 NewBarkTownElmsLabSign:
 	jumptext NewBarkTownElmsLabSignText
 
-NewBarkTownElmsHouseSign:
-	jumptext NewBarkTownElmsHouseSignText
-
-MrChronoScript: ; unreferenced
-	faceplayer
-	opentext
-	writetext MrChronoText
-	special MrChrono
-	closetext
-	end
+NewBarkTownRivalsHouseSign:
+	jumptext NewBarkTownRivalsHouseSignText
+	
+NewBarkTownPokecenterSign:
+	jumpstd PokecenterSignScript	
 
 NewBarkTown_TeacherRunsToYouMovement1:
 	step LEFT
@@ -176,22 +240,6 @@ NewBarkTown_TeacherBringsYouBackMovement2:
 	step RIGHT
 	step RIGHT
 	turn_head LEFT
-	step_end
-
-NewBarkTown_RivalPushesYouAwayMovement:
-	turn_head UP
-	step DOWN
-	step_end
-
-NewBarkTown_RivalShovesYouOutMovement:
-	turn_head UP
-	fix_facing
-	jump_step DOWN
-	remove_fixed_facing
-	step_end
-
-NewBarkTown_RivalReturnsToTheShadowsMovement:
-	step RIGHT
 	step_end
 
 Text_GearIsImpressive:
@@ -283,8 +331,8 @@ NewBarkTownElmsLabSignText:
 	text "ELM #MON LAB"
 	done
 
-NewBarkTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+NewBarkTownRivalsHouseSignText:
+	text "<RIVAL>'s House"
 	done
 
 MrChronoText:
@@ -297,8 +345,8 @@ NewBarkTown_MapEvents:
 	def_warp_events
 	warp_event 13, 13, ELMS_LAB, 1
 	warp_event  5,  5, PLAYERS_HOUSE_1F, 1
-	warp_event  0,  1, PLAYERS_NEIGHBORS_HOUSE, 1
-	warp_event  0,  1, ELMS_HOUSE, 1
+	warp_event 11,  5, NEW_BARK_POKECENTER_1F, 1
+	warp_event  3, 13, ELMS_HOUSE, 1
 
 	def_coord_events
 	coord_event  1,  8, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_TeacherStopsYouScene1
@@ -308,9 +356,10 @@ NewBarkTown_MapEvents:
 	bg_event 12,  8, BGEVENT_READ, NewBarkTownSign
 	bg_event  3,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
 	bg_event 11, 13, BGEVENT_READ, NewBarkTownElmsLabSign
-	bg_event  0,  0, BGEVENT_READ, NewBarkTownElmsHouseSign
+	bg_event  7, 13, BGEVENT_READ, NewBarkTownRivalsHouseSign
+	bg_event 12,  5, BGEVENT_READ, NewBarkTownPokecenterSign
 
 	def_object_events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event  8, 14, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event  8, 11, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_NEW_BARK_TOWN_1

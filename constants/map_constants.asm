@@ -447,6 +447,8 @@ ENDM
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
+	map_const SILENT_HILL,                                 25, 20 ; 14
+	map_const NEW_BARK_POKECENTER_1F,                       7,  4 ; 15
 	endgroup
 
 	newgroup SAFFRON                                              ; 25
@@ -468,11 +470,11 @@ ENDM
 	endgroup
 
 	newgroup CHERRYGROVE                                          ; 26
-	map_const ROUTE_30,                                    10, 27 ;  1
+	map_const ROUTE_30,                                    10, 18 ;  1
 	map_const ROUTE_31,                                    20,  9 ;  2
 	map_const CHERRYGROVE_CITY,                            20, 18 ;  3
 	map_const CHERRYGROVE_MART,                             6,  4 ;  4
-	map_const CHERRYGROVE_POKECENTER_1F,                    5,  4 ;  5
+	map_const CHERRYGROVE_POKECENTER_1F,                    7,  4 ;  5
 	map_const CHERRYGROVE_GYM_SPEECH_HOUSE,                 4,  4 ;  6
 	map_const GUIDE_GENTS_HOUSE,                            4,  4 ;  7
 	map_const CHERRYGROVE_EVOLUTION_SPEECH_HOUSE,           4,  4 ;  8

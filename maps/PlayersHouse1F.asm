@@ -26,7 +26,17 @@ MeetMomScript:
 	applymovement PLAYERSHOUSE1F_MOM1, MomWalksToPlayerMovement
 	opentext
 	writetext ElmsLookingForYouText
-	promptbutton
+	waitbutton
+	closetext
+	applymovement PLAYER, PlayerBackToRoom
+	playsound SFX_EXIT_BUILDING
+;	disappear PLAYER
+	special FadeOutPalettes
+	pause 15
+	warp PLAYERS_HOUSE_2F, 7, 0
+	end
+	
+MomScript2:	
 	getstring STRING_BUFFER_4, PokegearName
 	scall PlayersHouse1FReceiveItemStd
 	setflag ENGINE_POKEGEAR
@@ -148,6 +158,10 @@ MomWalksBackMovement:
 	slow_step LEFT
 	slow_step LEFT
 	step_end
+	
+PlayerBackToRoom:
+	step UP
+	step_end
 
 ElmsLookingForYouText:
 	text "Oh, <PLAYER>…! Our"
@@ -161,12 +175,14 @@ ElmsLookingForYouText:
 	cont "thing for him."
 
 	para "Oh! I almost for-"
-	line "got! Your #MON"
+	line "got! Your TRAINER"
 
 	para "GEAR is back from"
 	line "the repair shop."
 
-	para "Here you go!"
+	para "You should check"
+	line "your desk before"
+	cont "leaving."
 	done
 
 MomGivesPokegearText:

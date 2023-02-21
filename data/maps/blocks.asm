@@ -319,21 +319,6 @@ Route14_Blocks:
 BetaSproutTower8_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaSproutTower8.blk"
 
-OlivineMart_Blocks:
-EcruteakMart_Blocks:
-BlackthornMart_Blocks:
-CeruleanMart_Blocks:
-AzaleaMart_Blocks:
-VioletMart_Blocks:
-VermilionMart_Blocks:
-PewterMart_Blocks:
-FuchsiaMart_Blocks:
-LavenderMart_Blocks:
-ViridianMart_Blocks:
-SaffronMart_Blocks:
-CherrygroveMart_Blocks:
-	INCBIN "maps/Mart.blk"
-
 Route10North_Blocks:
 	INCBIN "maps/Route10North.blk"
 
@@ -361,6 +346,7 @@ CianwoodPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 SaffronPokecenter1F_Blocks:
 CherrygrovePokecenter1F_Blocks:
+NewBarkPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 BetaPewterMuseumOfScience1F_Blocks: ; unreferenced
@@ -989,3 +975,24 @@ DragonsDenB1F_Blocks:
 
 TohjoFalls_Blocks:
 	INCBIN "maps/TohjoFalls.blk"
+
+
+SECTION "Map Blocks 4", ROMX
+
+SilentHill_Blocks:
+	INCBIN "maps/SilentHill.blk"
+	
+OlivineMart_Blocks:
+EcruteakMart_Blocks:
+BlackthornMart_Blocks:
+CeruleanMart_Blocks:
+AzaleaMart_Blocks:
+VioletMart_Blocks:
+VermilionMart_Blocks:
+PewterMart_Blocks:
+FuchsiaMart_Blocks:
+LavenderMart_Blocks:
+ViridianMart_Blocks:
+SaffronMart_Blocks:
+CherrygroveMart_Blocks:
+	INCBIN "maps/Mart.blk"
