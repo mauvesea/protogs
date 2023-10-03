@@ -996,3 +996,6 @@ ViridianMart_Blocks:
 SaffronMart_Blocks:
 CherrygroveMart_Blocks:
 	INCBIN "maps/Mart.blk"
+	
+VioletBillsHouse_Blocks:
+	INCBIN "maps/VioletBillsHouse.blk"

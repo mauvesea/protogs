@@ -440,6 +440,61 @@ JohtoGrassWildMons:
 	db 5, UNOWN
 	db 5, UNOWN
 	end_grass_wildmons
+	
+	def_grass_wildmons SILENT_HILL
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	IF DEF(_GOLD)
+	; morn
+	db 2, SANDSHREW
+	db 2, SENTRET
+	db 3, SENTRET
+	db 3, SANDSHREW
+	db 4, ZUBAT
+	db 4, SENTRET
+	db 5, ZUBAT
+	; day
+	db 2, SANDSHREW
+	db 2, SENTRET
+	db 3, RATTATA
+	db 3, SANDSHREW
+	db 4, ZUBAT
+	db 4, SENTRET
+	db 5, ZUBAT
+	; nite
+	db 2, SANDSHREW
+	db 2, RATTATA
+	db 3, RATTATA
+	db 3, SANDSHREW
+	db 4, ZUBAT
+	db 4, RATTATA
+	db 5, ZUBAT
+	ELIF DEF(_SILVER)
+	; morn
+	db 2, EKANS
+	db 2, SENTRET
+	db 3, SENTRET
+	db 3, EKANS
+	db 4, ZUBAT
+	db 4, SENTRET
+	db 5, ZUBAT
+	; day
+	db 2, EKANS
+	db 2, SENTRET
+	db 3, SENTRET
+	db 3, EKANS
+	db 4, ZUBAT
+	db 4, SENTRET
+	db 5, ZUBAT
+	; nite
+	db 2, EKANS
+	db 2, RATTATA
+	db 3, RATTATA
+	db 3, EKANS
+	db 4, ZUBAT
+	db 4, RATTATA
+	db 5, ZUBAT
+	ENDC
+	end_grass_wildmons	
 
 	def_grass_wildmons UNION_CAVE_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1573,13 +1628,13 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 2, PIDGEY
+	db 2, NATU
 	db 3, SENTRET
-	db 3, PIDGEY
+	db 3, NATU
 	db 2, SENTRET
-	db 4, RATTATA
-	db 4, PIDGEY
-	db 4, PIDGEY
+	db 4, SENTRET
+	db 4, NATU
+	db 4, NATU
 	; day
 	db 2, PIDGEY
 	db 3, SENTRET
@@ -2295,25 +2350,25 @@ JohtoGrassWildMons:
 	db 2, SPEAROW
 	db 2, RATTATA
 	db 2, GEODUDE
-	db 3, SPEAROW
 	db 3, JIGGLYPUFF
-	db 5, JIGGLYPUFF
+	db 3, YANMA
+	db 5, YANMA
 	; day
 	db 3, GEODUDE
 	db 2, SPEAROW
 	db 2, RATTATA
 	db 2, GEODUDE
-	db 3, SPEAROW
 	db 3, JIGGLYPUFF
-	db 5, JIGGLYPUFF
+	db 3, YANMA
+	db 5, YANMA
 	; nite
 	db 3, GEODUDE
-	db 3, RATTATA
 	db 2, RATTATA
+	db 3, RATTATA
 	db 2, GEODUDE
-	db 4, GEODUDE
 	db 3, JIGGLYPUFF
-	db 5, JIGGLYPUFF
+	db 3, YANMA
+	db 5, YANMA
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_OUTSIDE

@@ -652,7 +652,7 @@ Route34_MapEvents:
 	bg_event 12,  6, BGEVENT_READ, Route34Sign
 	bg_event 13, 33, BGEVENT_READ, Route34TrainerTips
 	bg_event 10, 13, BGEVENT_READ, DayCareSign
-	bg_event  8, 32, BGEVENT_ITEM, Route34HiddenRareCandy
+	bg_event  8, 30, BGEVENT_ITEM, Route34HiddenRareCandy
 	bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion
 
 	def_object_events

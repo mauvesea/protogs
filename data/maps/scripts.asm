@@ -497,3 +497,4 @@ INCLUDE "maps/Route31VioletGate.asm"
 SECTION "Map Scripts 33", ROMX
 INCLUDE "maps/SilentHill.asm"
 INCLUDE "maps/NewBarkPokecenter1F.asm"
+INCLUDE "maps/VioletBillsHouse.asm"

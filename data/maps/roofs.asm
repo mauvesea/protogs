@@ -12,17 +12,17 @@ MapGroupRoofs:
 ; values are indexes for Roofs (see below)
 	table_width 1, MapGroupRoofs
 	db -1             ;  0
-	db ROOF_OLIVINE   ;  1 (Olivine)
-	db ROOF_AZALEA    ;  2 (Mahogany)
+	db -1             ;  1 (Olivine)
+	db -1             ;  2 (Mahogany)
 	db -1             ;  3
-	db ROOF_VIOLET    ;  4 (Ecruteak)
-	db ROOF_AZALEA    ;  5 (Blackthorn)
+	db -1             ;  4 (Ecruteak)
+	db -1             ;  5 (Blackthorn)
 	db -1             ;  6
 	db -1             ;  7
-	db ROOF_AZALEA    ;  8 (Azalea)
-	db ROOF_AZALEA    ;  9 (Lake of Rage)
-	db ROOF_VIOLET    ; 10 (Violet)
-	db ROOF_GOLDENROD ; 11 (Goldenrod)
+	db -1             ;  8 (Azalea)
+	db -1             ;  9 (Lake of Rage)
+	db -1             ; 10 (Violet)
+	db -1             ; 11 (Goldenrod)
 	db -1             ; 12
 	db -1             ; 13
 	db -1             ; 14
@@ -30,10 +30,10 @@ MapGroupRoofs:
 	db -1             ; 16
 	db -1             ; 17
 	db -1             ; 18
-	db ROOF_NEW_BARK  ; 19 (Silver Cave)
+	db -1             ; 19 (Silver Cave)
 	db -1             ; 20
 	db -1             ; 21
-	db ROOF_OLIVINE   ; 22 (Cianwood)
+	db -1             ; 22 (Cianwood)
 	db -1             ; 23
 	db -1             ; 24 (New Bark)
 	db -1             ; 25

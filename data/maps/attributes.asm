@@ -677,3 +677,4 @@ ENDM
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes SilentHill, SILENT_HILL, $09, 0
 	map_attributes NewBarkPokecenter1F, NEW_BARK_POKECENTER_1F, $00, 0
+	map_attributes VioletBillsHouse, VIOLET_BILLS_HOUSE, $00, 0

@@ -79,6 +79,9 @@ SproutTowerSign:
 
 EarlsPokemonAcademySign:
 	jumptext EarlsPokemonAcademySignText
+	
+VioletBillsHouseSign:
+	jumptext VioletBillsHouseSignText
 
 VioletCityPokecenterSign:
 	jumpstd PokecenterSignScript
@@ -272,8 +275,12 @@ SproutTowerSignText:
 	done
 
 EarlsPokemonAcademySignText:
-	text "EARL'S #MON"
-	line "ACADEMY"
+	text "EARL's #MON"
+	line "Academy"
+	done
+	
+VioletBillsHouseSignText:
+	text "BILL's House"
 	done
 
 VioletCity_MapEvents:
@@ -289,6 +296,7 @@ VioletCity_MapEvents:
 	warp_event 17, 17, SPROUT_TOWER_1F, 1
 	warp_event 39, 24, ROUTE_31_VIOLET_GATE, 1
 	warp_event 39, 25, ROUTE_31_VIOLET_GATE, 2
+	warp_event 19,  3, VIOLET_BILLS_HOUSE, 1
 
 	def_coord_events
 
@@ -297,6 +305,7 @@ VioletCity_MapEvents:
 	bg_event 15, 29, BGEVENT_READ, VioletGymSign
 	bg_event 18, 20, BGEVENT_READ, SproutTowerSign
 	bg_event 29, 17, BGEVENT_READ, EarlsPokemonAcademySign
+	bg_event 18,  4, BGEVENT_READ, VioletBillsHouseSign
 	bg_event 30, 29, BGEVENT_READ, VioletCityPokecenterSign
 	bg_event 26, 29, BGEVENT_READ, VioletCityMartSign
 	bg_event 15, 14, BGEVENT_ITEM, VioletCityHiddenHyperPotion

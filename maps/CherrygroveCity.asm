@@ -553,6 +553,7 @@ CherrygroveCity_MapEvents:
 	warp_event 21, 15, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
 	warp_event 33, 15, GUIDE_GENTS_HOUSE, 1
 	warp_event 21,  9, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
+	warp_event  5,  9, MR_POKEMONS_HOUSE, 1
 
 	def_coord_events
 	coord_event  0,  0, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveRivalSceneNorth
