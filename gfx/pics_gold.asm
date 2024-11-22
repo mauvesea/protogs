@@ -490,8 +490,6 @@ SpearowFrontpic:     INCBIN "gfx/pokemon/spearow/front_gold.2bpp.lz"
 
 SECTION "Pics 11", ROMX
 
-OctilleryBackpic:    INCBIN "gfx/pokemon/octillery/back.2bpp.lz"
-RaikouBackpic:       INCBIN "gfx/pokemon/raikou/back.2bpp.lz"
 ArticunoBackpic:     INCBIN "gfx/pokemon/articuno/back.2bpp.lz"
 HoppipFrontpic:      INCBIN "gfx/pokemon/hoppip/front_gold.2bpp.lz"
 MewFrontpic:         INCBIN "gfx/pokemon/mew/front_gold.2bpp.lz"
@@ -693,3 +691,5 @@ SECTION "Pics 15", ROMX
 
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front_gold.2bpp.lz"
 HoothootBackpic:     INCBIN "gfx/pokemon/hoothoot/back.2bpp.lz"
+OctilleryBackpic:    INCBIN "gfx/pokemon/octillery/back.2bpp.lz"
+RaikouBackpic:       INCBIN "gfx/pokemon/raikou/back.2bpp.lz"
