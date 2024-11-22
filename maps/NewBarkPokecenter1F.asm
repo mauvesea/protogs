@@ -12,14 +12,29 @@ NewBarkPokecenterRemoveStairs:
 	endcallback
 
 NewBarkPokecenter1FNurseScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue .StandardPokecenteScript
+	opentext
+	writetext NewbarkTownPokecenterNurseText1
+	waitbutton
+	closetext
+	end
+.StandardPokecenteScript
 	jumpstd PokecenterNurseScript
+
+NewbarkTownPokecenterNurseText1:
+	text "I'm sorry, we're"
+	line "still getting"
+	para "things ready"
+	line "here."
+	done
 
 NewBarkPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  5,  7, NEW_BARK_TOWN, 2
-	warp_event  6,  7, NEW_BARK_TOWN, 2
+	warp_event  5,  7, NEW_BARK_TOWN, 3
+	warp_event  6,  7, NEW_BARK_TOWN, 3
 	warp_event  0,  7, POKECENTER_2F, 1
 
 	def_coord_events
