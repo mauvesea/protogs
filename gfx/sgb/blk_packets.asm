@@ -96,3 +96,10 @@ BlkPacket_MagnetTrain:
 	attr_blk_data %111, 2,2,0, 00,04, 19,13 ; fence
 	attr_blk_data %011, 1,1,0, 00,06, 19,11 ; train
 	ds 2, 0
+
+BlkPacket_PackPals:
+	attr_blk 4
+	attr_blk_data %100, 0,0,0, 00,00, 19,17 ; Background
+	attr_blk_data %011, 1,1,0, 05,00, 09,01 ; Pack2
+	attr_blk_data %011, 2,2,0, 10,00, 14,01 ; Pack3
+	attr_blk_data %011, 3,3,0, 15,00, 19,01 ; Pack4

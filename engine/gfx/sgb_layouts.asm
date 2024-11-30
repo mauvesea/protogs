@@ -283,7 +283,7 @@ SGBLayoutJumptable:
 
 .SGB_PackPals:
 	ld hl, PalPacket_Pack
-	ld de, BlkPacket_AllPal0
+	ld de, BlkPacket_PackPals
 	ret
 
 .SGB_SlotMachine:

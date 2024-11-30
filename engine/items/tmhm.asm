@@ -184,16 +184,16 @@ TMHM_PocketLoop:
 	xor a
 	ldh [hBGMapMode], a
 	call TMHM_DisplayPocketItems
-	ld a, 2
+	ld a, 3
 	ld [w2DMenuCursorInitY], a
-	ld a, 7
+	ld a, 0
 	ld [w2DMenuCursorInitX], a
 	ld a, 1
 	ld [w2DMenuNumCols], a
-	ld a, 5
+	ld a, 4
 	sub d
 	inc a
-	cp 6
+	cp 5
 	jr nz, .okay
 	dec a
 .okay
@@ -311,7 +311,7 @@ TMHM_ScrollPocket:
 
 .skip
 	call TMHM_GetCurrentPocketPosition
-	ld b, 5
+	ld b, 4
 .loop
 	inc c
 	ld a, c
@@ -332,12 +332,12 @@ TMHM_DisplayPocketItems:
 	cp BATTLETYPE_TUTORIAL
 	jp z, Tutorial_TMHMPocket
 
-	hlcoord 5, 2
+	hlcoord 0, 2
 	lb bc, 10, 15
 	ld a, " "
 	call ClearBox
 	call TMHM_GetCurrentPocketPosition
-	ld d, $5
+	ld d, 4
 .loop2
 	inc c
 	ld a, c
@@ -379,7 +379,7 @@ TMHM_DisplayPocketItems:
 	ld [wPutativeTMHMMove], a
 	call GetMoveName
 	pop hl
-	ld bc, 3
+	ld bc, SCREEN_WIDTH
 	add hl, bc
 	push hl
 	call PlaceString
@@ -389,7 +389,7 @@ TMHM_DisplayPocketItems:
 	push bc
 	cp NUM_TMS + 1
 	jr nc, .hm2
-	ld bc, SCREEN_WIDTH + 9
+	ld bc, -SCREEN_WIDTH + 2
 	add hl, bc
 	ld [hl], "×"
 	inc hl
@@ -411,9 +411,6 @@ TMHM_DisplayPocketItems:
 
 .NotTMHM:
 	call TMHMPocket_GetCurrentLineCoord
-	inc hl
-	inc hl
-	inc hl
 	push de
 	ld de, TMHM_CancelString
 	call PlaceString
@@ -422,9 +419,9 @@ TMHM_DisplayPocketItems:
 	ret
 
 TMHMPocket_GetCurrentLineCoord:
-	hlcoord 5, 0
+	hlcoord 1, 1
 	ld bc, 2 * SCREEN_WIDTH
-	ld a, 6
+	ld a, 5
 	sub d
 	ld e, a
 	; AddNTimes

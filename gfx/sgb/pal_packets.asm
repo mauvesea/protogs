@@ -47,7 +47,7 @@ PalPacket_BetaIntroVenusaur:
 	sgb_pal_set BETA_INTRO_VENUSAUR, ROUTES, ROUTES, ROUTES
 
 PalPacket_Pack:
-	sgb_pal_set PACK, ROUTES, ROUTES, ROUTES
+	sgb_pal_set PACK1, PACK2, PACK3, PACK4
 
 PalPacket_BetaPikachuMinigame:
 	sgb_pal_set GS_INTRO_JIGGLYPUFF_PIKACHU_OB, ROUTES, ROUTES, ROUTES
