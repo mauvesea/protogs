@@ -1,9 +1,9 @@
 	db MISDREAVUS ; 200
 
-	db  60,  60,  60,  85,  85,  85
+	db  30, 120,  60,  10, 120,  60
 	;   hp  atk  def  spd  sat  sdf
 
-	db GHOST, GHOST ; type
+	db GHOST, DARK ; type
 	db 75 ; catch rate
 	db 125 ; base exp
 	db NO_ITEM, SPELL_TAG ; items
@@ -17,7 +17,7 @@ ELIF DEF(_SILVER)
 	INCBIN "gfx/pokemon/misdreavus/front_silver.dimensions"
 ENDC
 	dw NULL, NULL ; unused (beta front/back pics)
-	db GROWTH_FAST ; growth rate
+	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
 	; tm/hm learnset

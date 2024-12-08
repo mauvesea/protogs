@@ -2363,11 +2363,15 @@ AzumarillEvosAttacks:
 
 SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, MIMIC
-	db 13, SYNTHESIS
-	db 25, MEGA_DRAIN
-	db 37, LEECH_SEED
-	db 49, RAZOR_LEAF
+	db 1, SPLASH
+	db 1, LEECH_LIFE
+	db 1, ENDURE
+	db 8, DISABLE
+	db 16, SPITE
+	db 25, STOMP
+	db 35, NIGHT_SHADE
+	db 46, BODY_SLAM
+	db 58, PAIN_SPLIT
 	db 0 ; no more level-up moves
 
 PolitoedEvosAttacks:
