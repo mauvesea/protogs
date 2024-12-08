@@ -1858,7 +1858,7 @@ MoltresEvosAttacks:
 	db 1, EMBER
 	db 13, FIRE_SPIN
 	db 25, AGILITY
-	db 37, ENDUE
+	db 37, ENDURE
 	db 49, FLAMETHROWER
 	db 61, RECOVER
 	db 73, SKY_ATTACK
@@ -2852,7 +2852,7 @@ SkarmoryEvosAttacks:
 	db 19, PURSUIT
 	db 25, AGILITY
 	db 37, STEEL_WING
-	db 49, STEEL_SWIFT
+	db 49, SWIFT
 	db 0 ; no more level-up moves
 
 HoundourEvosAttacks:
