@@ -697,14 +697,6 @@ SwinubEggMoves:
 	db ANCIENTPOWER
 	db -1 ; end
 
-CorsolaEggMoves:
-	db ROCK_SLIDE
-	db SAFEGUARD
-	db SCREECH
-	db MIST
-	db AMNESIA
-	db -1 ; end
-
 RemoraidEggMoves:
 	db AURORA_BEAM
 	db OCTAZOOKA

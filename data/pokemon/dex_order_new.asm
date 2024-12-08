@@ -172,7 +172,6 @@ NewPokedexOrder:
 	db STARMIE
 	db SHELLDER
 	db CLOYSTER
-	db CORSOLA
 	db REMORAID
 	db OCTILLERY
 	db CHINCHOU
@@ -194,6 +193,7 @@ NewPokedexOrder:
 	db DELIBIRD
 	db SWINUB
 	db PILOSWINE
+	db PILOSWINE2
 	db TEDDIURSA
 	db URSARING
 	db PHANPY
