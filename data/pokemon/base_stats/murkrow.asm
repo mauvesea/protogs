@@ -5,7 +5,7 @@
 
 	db DARK, FLYING ; type
 	db 30 ; catch rate
-	db 107 ; base exp
+	db 92 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -17,7 +17,7 @@ ELIF DEF(_SILVER)
 	INCBIN "gfx/pokemon/murkrow/front_silver.dimensions"
 ENDC
 	dw NULL, NULL ; unused (beta front/back pics)
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_SLOW ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	; tm/hm learnset

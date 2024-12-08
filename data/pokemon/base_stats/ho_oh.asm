@@ -1,11 +1,11 @@
 	db HO_OH ; 250
 
-	db 106, 130,  90,  90, 110, 154
+	db 106, 110,  90,  90, 130, 154
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FLYING ; type
+	db FLYING, FLYING ; type
 	db 3 ; catch rate
-	db 220 ; base exp
+	db 255 ; base exp
 	db SACRED_ASH, SACRED_ASH ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1

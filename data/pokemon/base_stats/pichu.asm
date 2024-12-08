@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type
-	db 190 ; catch rate
+	db 255 ; catch rate
 	db 42 ; base exp
 	db NO_ITEM, BERRY ; items
 	db GENDER_F50 ; gender ratio

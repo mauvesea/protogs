@@ -1,11 +1,11 @@
 	db HERACROSS ; 214
 
-	db  80, 125,  75,  85,  40,  95
+	db 115, 130, 115,  75,  40,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, FIGHTING ; type
-	db 45 ; catch rate
-	db 200 ; base exp
+	db BUG, BUG ; type
+	db 25 ; catch rate
+	db 215 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

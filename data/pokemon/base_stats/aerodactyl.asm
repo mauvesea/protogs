@@ -1,13 +1,13 @@
 	db AERODACTYL ; 142
 
-	db  80, 105,  65, 130,  60,  75
+	db  80, 105,  65, 130,  60,  85
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, FLYING ; type
 	db 45 ; catch rate
 	db 202 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
+	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 35 ; step cycles to hatch
 	db 5 ; unknown 2

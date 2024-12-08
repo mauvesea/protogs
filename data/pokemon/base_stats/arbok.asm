@@ -1,6 +1,6 @@
 	db ARBOK ; 024
 
-	db  60,  85,  69,  80,  65,  79
+	db  60,  85,  69,  80,  68,  69
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, POISON ; type

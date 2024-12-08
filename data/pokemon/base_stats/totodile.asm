@@ -1,13 +1,13 @@
 	db TOTODILE ; 158
 
-	db  50,  65,  64,  43,  44,  48
+	db  44,  48,  65,  43,  50,  64
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 45 ; catch rate
 	db 66 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
+	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2

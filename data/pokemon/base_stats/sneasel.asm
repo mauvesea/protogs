@@ -1,11 +1,11 @@
 	db SNEASEL ; 215
 
-	db  55,  95,  55, 115,  35,  75
+	db  55,  95,  45, 115,  35,  45
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, ICE ; type
-	db 60 ; catch rate
-	db 132 ; base exp
+	db 45 ; catch rate
+	db 61 ; base exp
 	db NO_ITEM, QUICK_CLAW ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

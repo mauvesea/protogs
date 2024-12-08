@@ -1,11 +1,11 @@
 	db REMORAID ; 223
 
-	db  35,  65,  35,  65,  65,  35
+	db  35,  65,  45,  65,  45,  35
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 190 ; catch rate
-	db 78 ; base exp
+	db 100 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

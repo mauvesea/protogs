@@ -1,11 +1,11 @@
 	db DELIBIRD ; 225
 
-	db  45,  55,  45,  75,  65,  45
+	db  45,  45,  30,  75,  60,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db ICE, FLYING ; type
+	db ICE, ICE ; type
 	db 45 ; catch rate
-	db 183 ; base exp
+	db 144 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

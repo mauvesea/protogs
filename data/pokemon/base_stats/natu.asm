@@ -5,7 +5,7 @@
 
 	db PSYCHIC_TYPE, FLYING ; type
 	db 190 ; catch rate
-	db 73 ; base exp
+	db 70 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

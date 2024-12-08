@@ -1,11 +1,11 @@
 	db QUAGSIRE ; 195
 
-	db  95,  85,  85,  35,  65,  65
+	db  85,  75,  75,  35,  65,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, GROUND ; type
-	db 90 ; catch rate
-	db 137 ; base exp
+	db 65 ; catch rate
+	db 127 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

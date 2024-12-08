@@ -1,6 +1,6 @@
 	db PERSIAN ; 053
 
-	db  65,  70,  60, 115,  65,  65
+	db  65,  70,  60, 115,  65,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

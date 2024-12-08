@@ -1,10 +1,10 @@
 	db SUNKERN ; 191
 
-	db  30,  30,  30,  30,  30,  30
+	db  55,  45,  45,  30,  65,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
-	db 235 ; catch rate
+	db 190 ; catch rate
 	db 52 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
@@ -17,7 +17,7 @@ ELIF DEF(_SILVER)
 	INCBIN "gfx/pokemon/sunkern/front_silver.dimensions"
 ENDC
 	dw NULL, NULL ; unused (beta front/back pics)
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_PLANT, EGG_PLANT ; egg groups
 
 	; tm/hm learnset
