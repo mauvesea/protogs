@@ -330,13 +330,11 @@ Pokedex_InitDexEntryScreen:
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
-	call Pokedex_LoadCurrentFootprint
 	call Pokedex_DrawDexEntryScreenBG
 	call Pokedex_InitArrowCursor
 	call Pokedex_GetSelectedMon
 	ld [wPrevDexEntry], a
 	farcall DisplayDexEntry
-	call Pokedex_DrawFootprint
 	call WaitBGMap
 	ld a, $a7
 	ldh [hWX], a
@@ -403,11 +401,9 @@ Pokedex_ReinitDexEntryScreen:
 	ldh [hBGMapMode], a
 	call Pokedex_DrawDexEntryScreenBG
 	call Pokedex_InitArrowCursor
-	call Pokedex_LoadCurrentFootprint
 	call Pokedex_GetSelectedMon
 	ld [wPrevDexEntry], a
 	farcall DisplayDexEntry
-	call Pokedex_DrawFootprint
 	call Pokedex_LoadSelectedMonTiles
 	call WaitBGMap
 	call Pokedex_GetSelectedMon
@@ -493,7 +489,6 @@ DexEntryScreen_MenuActionJumptable:
 	ld [wPrevDexEntryBackup], a
 	call ClearBGPalettes
 	call DisableLCD
-	call Pokedex_LoadInvertedFont
 	call Pokedex_RedisplayDexEntry
 	call EnableLCD
 	call WaitBGMap
@@ -2433,11 +2428,9 @@ Pokedex_LoadGFX:
 	ld bc, $31 tiles
 	xor a
 	call ByteFill
-	call Pokedex_LoadInvertedFont
 	call LoadFontsExtra
 	ld hl, vTiles2 tile $60
 	ld bc, $20 tiles
-	call Pokedex_InvertTiles
 	call Pokedex_CheckSGB
 	jr nz, .LoadPokedexLZ
 	farcall LoadSGBPokedexGFX
@@ -2497,7 +2490,6 @@ Pokedex_LoadUnownFont:
 	call FarCopyBytes
 	ld hl, sDecompressBuffer
 	ld bc, (NUM_UNOWN + 1) tiles
-	call Pokedex_InvertTiles
 	ld de, sDecompressBuffer
 	ld hl, vTiles2 tile FIRST_UNOWN_CHAR
 	lb bc, BANK(Pokedex_LoadUnownFont), NUM_UNOWN + 1
@@ -2533,11 +2525,9 @@ _NewPokedexEntry:
 	call LoadStandardFont
 	call LoadFontsExtra
 	call Pokedex_LoadGFX
-	call Pokedex_LoadAnyFootprint
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
 	call Pokedex_DrawDexEntryScreenBG
-	call Pokedex_DrawFootprint
 	hlcoord 0, 17
 	ld [hl], $3b
 	inc hl
